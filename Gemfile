@@ -7,8 +7,16 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 
-# location calculation stuff
+# => location calculation stuff
+#
 gem 'geokit'
+
+gem 'jquery-rails'
+
+# => I18N
+#
+gem 'rails-i18n'
+
 
 
 # Gems used only for assets and not required
@@ -26,9 +34,16 @@ end
 group :test do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
+	gem 'shoulda'
 end
 
-gem 'jquery-rails'
+
+group :development do 
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-db'
+  gem 'libnotify'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

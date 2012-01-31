@@ -45,10 +45,10 @@ module Masjid
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 	
-	config.generators do |g|
-		g.test_framework :rspec
-		g.helper false
-	end
+  	config.generators do |g|
+  		g.test_framework :rspec, fixture_replacement: :factory_girl , fixture: true
+  		g.helper false
+  	end
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
